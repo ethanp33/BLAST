@@ -1,6 +1,6 @@
 '''
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Created By: Ethan Payne
+Created By: Ethan
 Date: 8/09/2022
 Version = 1.1
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -17,8 +17,9 @@ import numpy as np
 
 def blast(file_name: str, blast_type: str, max_hits: int = None, megablast: bool = False, e_value_threshold: float = None):
     """
-    A function that runs a BLAST of desired type and saves the results as an xml file. 
-    :inputs: file_name (including file extension), blast_type (one of blastn, blastp, tblastn or tblastx)
+    A function that runs a BLAST of desired type and saves the results as a csv file
+    :inputs: file_name (including file extension), blast_type (one of blastn, blastp, tblastn or tblastx),
+            max_hits, megablast, e_value_threshold
     :returns: None
     """ 
 
@@ -73,7 +74,6 @@ def blast(file_name: str, blast_type: str, max_hits: int = None, megablast: bool
         df["per_ident"] = np.round((df["identity"] / df["align_len"])*100, decimals=2)
 
         # Calculating query coverage
-        #df["query_cover"] = df["align_len"] / (df["query_to"] - df["query_from"] + 1)
         df["query_cover"] = np.round((df["query_to"] - df["query_from"] + 1)/len(seq_file.seq)*100, decimals=2)
 
         # Change order of columns
@@ -97,4 +97,4 @@ def blast(file_name: str, blast_type: str, max_hits: int = None, megablast: bool
         print("Success! Dataframe has successfully been saved as " + str(file_name).split(".")[0] + "_dataframe.csv" + ". Press any key to exit function.")
     else:
         print("blast_type not one of blastn, blastp, blastx, tblastn or tblastx")
-        blast(file_name=file_name, blast_type=blast_type, max_hits=max_hits, megablast=megablast, e_value_threshold=e_value_threshold)   
+        blast(file_name=file_name, blast_type=blast_type, max_hits=max_hits, megablast=megablast, e_value_threshold=e_value_threshold)
