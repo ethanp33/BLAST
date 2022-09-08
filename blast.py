@@ -1,73 +1,100 @@
 '''
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Created By: Ethan Payne
-Date: 25/08/2022
-Version = 1.0
+Date: 8/09/2022
+Version = 1.1
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-A Python script designed to take a sequence in FASTA format and perform a BLAST search, downloading the results in a csv format
+A Python script designed to take a sequence in FASTA format and perform a BLAST search, exporting the results in a csv format
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 '''
 
 # Imports
 from Bio.Blast import NCBIWWW, NCBIXML
 from Bio import SeqIO
+import pandas as pd
+from lxml import etree as et
+import numpy as np
 
-# Open sequence file
-#def open_seq():
-    #try:
-file_name = str(input("Enter the file name (including extension) of your sequence file. Ensure that the file is located in the same folder as this script.\n"))
-seq_file = next(SeqIO.parse(open(file_name), "fasta"))
-    #except 
+def blast(file_name: str, blast_type: str, max_hits: int = None, megablast: bool = False, e_value_threshold: float = None):
+    """
+    A function that runs a BLAST of desired type and saves the results as an xml file. 
+    :inputs: file_name (including file extension), blast_type (one of blastn, blastp, tblastn or tblastx)
+    :returns: None
+    """ 
 
+    # Error check
+    if blast_type.lower() in ["blastn", "blastp", "blastx", "tblastn", "tblastx"]:
+        
+        # Open sequence file
+        seq_file = next(SeqIO.parse(open(file_name), "fasta"))
 
-# Blast type
-def bt():
-    blast_type = str(input("What type of BLAST search would you like to run? blastn, blastp, tblastn or tblastx?\n")).lower()
-    if blast_type not in ["blastn", "blastp", "tblastn", "tblastx"]:
-        print("Error: Response is not one of: blastn, blastp, tblastn or tblastx.")
-        bt()
+        # Megablast
+        if blast_type == "blastn":
+            if megablast == True:
+                query = NCBIWWW.qblast(blast_type, "nt", seq_file.seq, megablast=True)
+
+        # Start query
+        print("Starting BLAST query on NCBI database...")
+        print("Please hold. This process can take up to 10 minutes to complete...")
+        query = NCBIWWW.qblast(blast_type, "nt", seq_file.seq)
+        print(query)
+
+        # Store results as XML
+        print("Storing results as an XML file...")
+        with open(str(file_name).split(".")[0] + "_results.xml", "w") as save_file:
+            blast_results = query.read()
+            save_file.write(blast_results)
+
+        print("Success! " + str(file_name).split(".")[0] + "_results.xml has been saved!")
+        
+        # Make raw dataframe
+        print("Parsing XML file as dataframe...")
+        df = pd.read_xml(str(file_name).split(".")[0] + "_results.xml", xpath=".//Hsp")
+        
+        # Edit raw dataframe
+        # Rename and drop columns
+        df = df.drop(["Hsp_num", "Hsp_qseq", "Hsp_query-frame", "Hsp_hit-frame"], axis=1)
+        df = df.rename(columns={"Hsp_bit-score" : "bit_score", "Hsp_score" : "score", "Hsp_evalue" : "evalue", "Hsp_query-from" : "query_from", "Hsp_query-to" : "query_to",
+        "Hsp_hit-from" : "hit_from", "Hsp_hit-to" : "hit_to", "Hsp_identity" : "identity", "Hsp_positive" : "positive", "Hsp_gaps" : "gaps", "Hsp_align-len" : "align_len",
+        "Hsp_hseq" : "hit_seq", "Hsp_midline" : "midline"})
+
+        # Add new columns based on Hit XML alltributes
+        tree = et.parse(open(str(file_name).split(".")[0] + "_results.xml"))
+        hit_id = tree.xpath(".//Hit/Hit_id/text()")
+        hit_def = tree.xpath(".//Hit/Hit_def/text()")
+        hit_accession = tree.xpath(".//Hit/Hit_accession/text()")
+        hit_length = tree.xpath(".//Hit/Hit_len/text()")
+        df["id"] = hit_id
+        df["description"] = hit_def
+        df["accession"] = hit_accession
+        df["acc_len"] = hit_length
+
+        # Calculating percent identity
+        df["per_ident"] = np.round((df["identity"] / df["align_len"])*100, decimals=2)
+
+        # Calculating query coverage
+        #df["query_cover"] = df["align_len"] / (df["query_to"] - df["query_from"] + 1)
+        df["query_cover"] = np.round((df["query_to"] - df["query_from"] + 1)/len(seq_file.seq)*100, decimals=2)
+
+        # Change order of columns
+        df = df[["id", "description", "bit_score", "score", "query_cover", "per_ident", "evalue", "query_from", "query_to", 
+        "hit_from", "hit_to", "identity", "positive", "gaps", "align_len", "acc_len", "hit_seq", "midline", "accession"]]
+
+        # Remove rows if e-value is over threshold
+        if e_value_threshold is not None:
+            df = df[df.evalue < e_value_threshold]
+        
+        # Cap rows/hits if there is a maximum
+        if max_hits is not None:
+            df = df.sort_values(by="evalue", ascending=False)
+            df = df.head(max_hits)
+
+        # Save editted dataframe
+        print("Saving dataframe as csv file...")
+        df.to_csv(str(file_name).split(".")[0] + "_dataframe.csv")
+
+        # End
+        print("Success! Dataframe has successfully been saved as " + str(file_name).split(".")[0] + "_dataframe.csv" + ". Press any key to exit function.")
     else:
-        return blast_type
-blast_type = bt()
-
-# Megablast
-def mb():
-    mb_response = str(input("Would you like to run a Megablast? Type yes or no.\n")).lower()
-    if mb_response not in ["yes", "no"]:
-        print("Error: Response is not one of: yes, no")
-        mb()
-    else:
-        return mb_response
-
-# Start query
-if blast_type == "blastn":
-    megablast = mb()
-    if megablast == "yes":
-        print("Starting query...")
-        query = NCBIWWW.qblast(blast_type, "nt", seq_file.seq, megablast=True)
-print("Starting query...")
-query = NCBIWWW.qblast(blast_type, "nt", seq_file.seq)
-print(query)
-
-# Store results as XML
-print("Storing results as an XML file...")
-with open(str(file_name).split(".")[0] + "_results.xml", "w") as save_file:
-    blast_results = query.read()
-    save_file.write(blast_results)
-
-print("Success! " + str(file_name).split(".")[0] + "_results.xml has been saved!")
-
-print("Parsing XML file...")
-# Parse XML results
-E_VALUE_THRESH = 1e-20
-for record in NCBIXML.parse(open(str(file_name).split(".")[0] + "_results.xml", "w")):
-    if record.alignments:
-        print("\n")
-        print("query: %s" % record.query[:100])
-        for align in record.alignments:
-            for hsp in align.hsps:
-                if hsp.expect < E_VALUE_THRESH:
-                    print("match: %s " % align.title[:100])
-
-# Exit
-i = input("Press any key to exit. ")
+        print("blast_type not one of blastn, blastp, blastx, tblastn or tblastx")
+        blast(file_name=file_name, blast_type=blast_type, max_hits=max_hits, megablast=megablast, e_value_threshold=e_value_threshold)   
