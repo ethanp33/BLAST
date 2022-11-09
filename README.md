@@ -112,5 +112,12 @@ The BLAST function is used to run a BLAST on a single FASTA file or all FASTA fi
    - ![image](https://user-images.githubusercontent.com/62312637/200760687-1a3f5bb4-d431-47d6-bc12-195d5b6c0052.png)
 2. Type either S or M to run a Single or Multiple BLAST respectively. For example, type `S`:
    - ![image](https://user-images.githubusercontent.com/62312637/200760879-d79e9e05-e438-45df-aa5f-3df7ada70cfd.png)
-3. Type the location of the FASTA file you would like to BLAST. For example, type `blast\MN095883.1.fna`:
-   - 
+3. Type the location of the FASTA file you would like to BLAST. For example, type `examples\blast\MN095883.1.fna`:
+   - ![image](https://user-images.githubusercontent.com/62312637/200761565-23ad7c54-bda2-4f8d-8037-0f9aafcd2be0.png)
+4. Enter the blast type. For example, enter: `blastn`:
+   - ![image](https://user-images.githubusercontent.com/62312637/200761636-2f7956a7-94d1-4a77-a05b-c12e6f295efb.png)
+5. Enter Y or N for yes or no respectively to run a megablast. For example, enter: `Y`
+   - ![image](https://user-images.githubusercontent.com/62312637/200761787-4689f180-f0d3-477c-b752-0de860413794.png)
+6. Enter the maximum number of hits. For example, enter: `none`:
+   - ![image](https://user-images.githubusercontent.com/62312637/200761845-756c2dca-db09-4eff-b3f3-c680c6ce7135.png)
+7. The application will now create a CSV file containing the BLAST results in the `blast` folder.
