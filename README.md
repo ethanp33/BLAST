@@ -122,4 +122,4 @@ The BLAST function is used to run a BLAST on a single FASTA file or all FASTA fi
    - Warning: Typing None will cause this to run forever, I would avoid it if possible.
    - ![image](https://user-images.githubusercontent.com/62312637/200769717-4d9eb7bb-de9b-4412-bc16-0e67d8cd6f93.png)
 7. The application will now create a CSV file containing the BLAST results in the `blast` folder:
-   - ![image](https://user-images.githubusercontent.com/62312637/200769795-6c533a21-e826-4bad-bcea-ff9c8766757d.png)
+   - ![image](https://user-images.githubusercontent.com/62312637/200770541-f39533f1-aa9b-4e8d-b8aa-b44f32f05785.png)
