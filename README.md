@@ -40,7 +40,8 @@ Firstly, to run these scripts you must install Python. You can install standalon
 3. Open the `Biopython-Scripts-main` foldder in the location in which you extracted the ZIP file.
 4. Inside you will notice various files and folders:
    - `__pycache__` - Ignore this folder! There is nothing of use here.
-   - `examples` - This folder containins multiple files that can be used as examples to test the operation of all scripts included in this package. As a majority of these scripts can take hours to run, I thought to include the results of using these examples for convenience.
+   - `examples` This folder contains multiple files that can be used as examples to test the operation of all scripts included in this package. As a majority of these scripts can take hours to run with large data, I thought to include examples using a small dataset.
+   - `results` - This folder contains the results of running these scripts on a much larger dataset. As a majority of these scripts can take hours to run, I thought to include the results of using these examples on a large dataset for convenience.
    - `blast_functions.py` - Module containing functions that run BLAST on FASTA files or FASTA files in a directory.
    - `combine_sequence_function.py` - Module containing a function to combining FASTA files in a directory.
    - `download_function.py` - Module containing a function that downloads FASTA files for species in a line seperated text file.
