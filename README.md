@@ -98,6 +98,13 @@ The combine sequences function is used to combine FASTA files containing sequenc
 ## 4. Retrieving Metadata
 The get metadata function is used to download metadata for all sequences inside of a FASTA file in the format of a CSV file. The function places the CSV file next to the inputted FASTA file. For example, if you input `downloads\species_names\gene_name\combined\combined_sequences.fna`, it will place the CSV file in `downloads\species_names\gene_name\combined`.
 1. Select option 4 in the main menu by typing `4` and hitting enter:
+   - ![image](https://user-images.githubusercontent.com/62312637/200759875-cc8bd0c2-add1-44d5-a8ff-ef9b692246f7.png)
+2. Type the location of the FASTA file containing multiple sequences you would like to retrieve metadata for. For example, use `downloads\nematode_names\COI\combined\combined_sequences.fna`:
+   - ![image](https://user-images.githubusercontent.com/62312637/200760100-3b3a0ee2-6449-4235-869a-3942e1dbdcfa.png)
+3. Enter your email address:
+   - ![image](https://user-images.githubusercontent.com/62312637/200760175-155d1a08-809e-4710-afaa-e945ca92855e.png)
+4. The application will now create a CSV file containing all of the metadata in the `downloads\species_names\gene_name\combined` folder:
+   - ![image](https://user-images.githubusercontent.com/62312637/200760384-d368f104-a965-4787-a21f-bc97dad3301c.png)
 
 ## 5. BLAST
 The BLAST function is used to run a BLAST on a single FASTA file or all FASTA files in a directory. As a warning, this function is extremely slow and I would reccommend running a single BLAST. The function places the results of the BLAST in CSV file format next to the inputted FASTA file. For example, if you input `blast\MN095883.1.fna`, it will place the CSV file in `blast`. For the BLAST functions, you can find the example files here: `examples\blast`.
