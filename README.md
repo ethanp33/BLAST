@@ -45,3 +45,7 @@ Firstly, to run these scripts you must install Python. You can install standalon
    - `notebook.ipynb` - Python Notebook that can be opened through GitHub to preview some of the applications of this script. Mostly used this when testing and creating my scripts.
    - `README.MD` - Text file containing all of the documentation that you are reading now.
    - `remove_duplicates_function.py` - Module containing a function that deletes duplicate FASTA files in a directory given they have the same sequence and country of origin.
+
+## 5. Running Biopython-Scripts
+1. If you installed Standalone Python, open Command Prompt on Windows or Terminal on Mac. If you installed Anaconda, open Anaconda Prompt.
+2. Get the directory of `Biopython-Scripts-main` In file explorer, ![image](https://user-images.githubusercontent.com/62312637/200745665-5efb71f8-f4cc-47ff-adac-f5358033d720.png)
