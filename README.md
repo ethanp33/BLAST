@@ -73,7 +73,7 @@ The download function is used to download FASTA files containing sequences from 
 4. Enter the name of the gene you would like to download sequences for. For example, use `COI`:
    - ![image](https://user-images.githubusercontent.com/62312637/200756072-3cc8a291-5178-4b15-a57a-d8d52392d494.png)
 5. The application will now download all sequences in FASTA file format, and store them in the `downloads\species_names\gene_name` folder:
-   - ![image](https://user-images.githubusercontent.com/62312637/200756424-6115afbc-8d7f-406f-9060-40ff72ab8074.png)
+   - ![image](https://user-images.githubusercontent.com/62312637/200756592-4ae0e40a-231d-4e72-9a26-30d82479be66.png)
 
 ## 2. Removing Duplicate Sequences
 The remove duplicate sequence function is used to remove FASTA files containing sequences in a directory given they have the same nucleotide sequence and country of origin.
