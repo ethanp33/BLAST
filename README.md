@@ -64,15 +64,20 @@ Firstly, to run these scripts you must install Python. You can install standalon
    - ![image](https://user-images.githubusercontent.com/62312637/200746939-c5040aec-b1e6-446f-88b6-7e8f9a48d6eb.png)
 
 # Using Biopython-Scripts
-This section covers the useage and functionality of all the scripts accessible via the command line main menu by using the included examples located in the `examples` folder.
+This section covers the useage and functionality of all the scripts accessible via the command line main menu by using the included example located in the `examples` folder.
 
-## 1. Using the download function
-The download function is used to download FASTA files containing sequences from a text file contaning a line seperated text file containing a list of species names. For the download function, you can find the example file here: `examples\nematode_names.txt`. As you can see, it contains line-seperated names of species we would like to download the sequences of:
+## 1. Downloading Sequences
+The download function is used to download FASTA files containing sequences from a text file contaning a line seperated text file containing a list of species names. This function downloads sequences and places them inside the `downloads\species_names\gene_name` folder. For the download function, you can find the example file here: `examples\nematode_names.txt`. As you can see, it contains line-seperated names of species we would like to download the sequences of:
 - ![image](https://user-images.githubusercontent.com/62312637/200751704-a4629d0f-a566-4ba6-bcfa-39969e193079.png)
 1. Select option 1 in the main menu by typing `1` and hitting enter:
 
 
-## 2. Using the remove duplicate sequences function
+## 2. Removing Duplicate Sequences
 The remove duplicate sequence function is used to remove FASTA files containing sequences in a directory given they have the same nucleotide sequence and country of origin.
 1. Select option 2 in the main menu by typing `2` and hitting enter:
-2. 
+
+## 3. Combining Sequences
+The combine sequences function is used to combine FASTA files containing sequences in a directory into a single FASTA file. The function places the combined FASTA file inside of the `downloads\species_names\gene_name\combined` folder. 
+
+## 4. Retrieving Metadata
+The get metadata function is used to download metadata for all sequences inside of a FASTA file in the format of a CSV file. The function places the CSV file next to the inputted FASTA file. For example, if you input `downloads\species_names\gene_name\combined\combined_sequences.fna`, it will place the CSV file in `downloads\species_names\gene_name\combined`. 
