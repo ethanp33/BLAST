@@ -1,5 +1,7 @@
 # Getting Started
 
+This section covers how to install Python, the necessary packages and how to install and run my Biopython-Scripts.
+
 ## 1. Installing Python
 
 Firstly, to run these scripts you must install Python. You can install standalone Python. Or, if you are planning on doing lots of data science in Python, you can install Anaconda which packages Python alongside libraries useful for data science.
@@ -61,6 +63,8 @@ Firstly, to run these scripts you must install Python. You can install standalon
    - ![image](https://user-images.githubusercontent.com/62312637/200746939-c5040aec-b1e6-446f-88b6-7e8f9a48d6eb.png)
 
 # Using Biopython-Scripts
+This section covers the useage and functionality of all the scripts accessible via the command line main menu by using the included examples located in the `examples` folder.
 
 ## 1. Using the download function
-The download function is used to download FASTA files containing sequences from a text file contaning a line seperated text file containing a list of species names.
+The download function is used to download FASTA files containing sequences from a text file contaning a line seperated text file containing a list of species names. For the download function, you can find the example file here: `\examples\nematode_names.txt`. As you can see, it contains line-seperated names of species we would like to download the sequences of:
+- ![image](https://user-images.githubusercontent.com/62312637/200751704-a4629d0f-a566-4ba6-bcfa-39969e193079.png)
