@@ -37,3 +37,11 @@ Firstly, to run these scripts you must install Python. You can install standalon
 4. Inside you will notice various files and folders:
    - `__pycache__` - Ignore this folder! There is nothing of use here.
    - `examples` - This folder containins multiple files that can be used as examples to test the operation of all scripts included in this package. As a majority of these scripts can take hours to run, I thought to include the results of using these examples for convenience.
+   - `blast_functions.py` - Module containing functions that run BLAST on FASTA files or FASTA files in a directory.
+   - `combine_sequence_function.py` - Module containing a function to combining FASTA files in a directory.
+   - `download_function.py` - Module containing a function that downloads FASTA files for species in a line seperated text file.
+   - `main.py` - The **main** Python script. Run this to access all modules/scripts in a command-line format.
+   - `metadata_functions.py` - Module containing functions that download metadata from the NCBI given a FASTA file containing multiple sequences.
+   - `notebook.ipynb` - Python Notebook that can be opened through GitHub to preview some of the applications of this script. Mostly used this when testing and creating my scripts.
+   - `README.MD` - Text file containing all of the documentation that you are reading now.
+   - `remove_duplicates_function.py` - Module containing a function that deletes duplicate FASTA files in a directory given they have the same sequence and country of origin.
