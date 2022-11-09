@@ -67,7 +67,7 @@ Firstly, to run these scripts you must install Python. You can install standalon
 This section covers the useage and functionality of all the scripts accessible via the command line main menu by using the included examples located in the `examples` folder.
 
 ## 1. Using the download function
-The download function is used to download FASTA files containing sequences from a text file contaning a line seperated text file containing a list of species names. For the download function, you can find the example file here: `\examples\nematode_names.txt`. As you can see, it contains line-seperated names of species we would like to download the sequences of:
+The download function is used to download FASTA files containing sequences from a text file contaning a line seperated text file containing a list of species names. For the download function, you can find the example file here: `examples\nematode_names.txt`. As you can see, it contains line-seperated names of species we would like to download the sequences of:
 - ![image](https://user-images.githubusercontent.com/62312637/200751704-a4629d0f-a566-4ba6-bcfa-39969e193079.png)
 1. Select option 1 in the main menu by typing `1` and hitting enter:
 
