@@ -1,15 +1,12 @@
 # Getting Started
-
 This section covers how to install Python, the necessary packages and how to install and run my Biopython-Scripts.
 
 ## 1. Installing Python
-
 Firstly, to run these scripts you must install Python. You can install standalone Python. Or, if you are planning on doing lots of data science in Python, you can install Anaconda which packages Python alongside libraries useful for data science. For a majority of people, I would recommend installing standalone Python.
 - [Standalone Python](https://www.python.org/downloads/)
 - [Anaconda](https://www.anaconda.com/)
 
 ## 2. Importing Packages into Standalone Python
-
 1. Open Command Prompt if you are a Windows user, or open Terminal if you are a Mac user.
 2. You will need to install each package individually using PIP, which is an in-built package manager for Python.
 3. Install the below packages by entering these commands individually:
@@ -19,7 +16,6 @@ Firstly, to run these scripts you must install Python. You can install standalon
    - `pip install numpy`
 
 ## 3. Importing Packages into Anaconda
-
 1. Open Anaconda Prompt.
 2. You will need to install each package individually using PIP, which is an in-built package manager for Python.
 3. All of the packages used in these scripts are already included in Anaconda, however it is worthwhile upgrading each package incase it is out of date or missing by entering these commands individually:
@@ -34,7 +30,6 @@ Firstly, to run these scripts you must install Python. You can install standalon
    - `pip install numpy`
 
 ## 4. Downloading Biopython-Scripts
-
 1. Click the green code button above, then select download ZIP. Or alternatively, click [this](https://github.com/ethanp33/Biopython-Scripts/archive/refs/heads/main.zip) to download the necessary files directly.
 2. Extract the contents of the ZIP file to a location of your choice, make sure to remember where you extracted this!
 3. Open the `Biopython-Scripts-main` foldder in the location in which you extracted the ZIP file.
@@ -77,7 +72,13 @@ The remove duplicate sequence function is used to remove FASTA files containing 
 1. Select option 2 in the main menu by typing `2` and hitting enter:
 
 ## 3. Combining Sequences
-The combine sequences function is used to combine FASTA files containing sequences in a directory into a single FASTA file. The function places the combined FASTA file inside of the `downloads\species_names\gene_name\combined` folder. 
+The combine sequences function is used to combine FASTA files containing sequences in a directory into a single FASTA file. The function places the combined FASTA file inside of the `downloads\species_names\gene_name\combined` folder.
+1. Select option 3 in the main menu by typing `3` and hitting enter:
 
 ## 4. Retrieving Metadata
-The get metadata function is used to download metadata for all sequences inside of a FASTA file in the format of a CSV file. The function places the CSV file next to the inputted FASTA file. For example, if you input `downloads\species_names\gene_name\combined\combined_sequences.fna`, it will place the CSV file in `downloads\species_names\gene_name\combined`. 
+The get metadata function is used to download metadata for all sequences inside of a FASTA file in the format of a CSV file. The function places the CSV file next to the inputted FASTA file. For example, if you input `downloads\species_names\gene_name\combined\combined_sequences.fna`, it will place the CSV file in `downloads\species_names\gene_name\combined`.
+1. Select option 4 in the main menu by typing `4` and hitting enter:
+
+## 5. BLAST
+The BLAST function is used to run a BLAST on a single FASTA file or all FASTA files in a directory. As a warning, this function is extremely slow and I would reccommend running a single BLAST. The function places the results of the BLAST in CSV file format next to the inputted FASTA file. For example, if you input `blast\MN095883.1.fna`, it will place the CSV file in `downloads\blast`. For the BLAST functions, you can find the example files here: `examples\blast`.
+1. Select option 5 in the main menu by typing `5` and hitting enter:
