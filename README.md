@@ -48,4 +48,5 @@ Firstly, to run these scripts you must install Python. You can install standalon
 
 ## 5. Running Biopython-Scripts
 1. If you installed Standalone Python, open Command Prompt on Windows or Terminal on Mac. If you installed Anaconda, open Anaconda Prompt.
-2. Get the directory of `Biopython-Scripts-main` In file explorer, ![image](https://user-images.githubusercontent.com/62312637/200745802-85d73f6d-bc8f-4dc2-b74c-6f8edff6bcca.png)
+2. Get the directory of `Biopython-Scripts-main` In file explorer, click the box and copy the directory text like so: 
+   - ![image](https://user-images.githubusercontent.com/62312637/200745802-85d73f6d-bc8f-4dc2-b74c-6f8edff6bcca.png)
