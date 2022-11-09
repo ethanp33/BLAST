@@ -50,3 +50,10 @@ Firstly, to run these scripts you must install Python. You can install standalon
 1. If you installed Standalone Python, open Command Prompt on Windows or Terminal on Mac. If you installed Anaconda, open Anaconda Prompt.
 2. Get the directory of `Biopython-Scripts-main` In file explorer, click the box and copy the directory text like so: 
    - ![image](https://user-images.githubusercontent.com/62312637/200745802-85d73f6d-bc8f-4dc2-b74c-6f8edff6bcca.png)
+3. As you can see, in this case my working directory is `D:\Biopython-Scripts-main`.
+4. Now in Command Prompt / Terminal / Anaconda Prompt, type: `cd "directory"` and hit enter. Where directory is your working  directory. In my case, I would type:
+   - `cd "D:\Biopython-Scripts-main"`
+5. Now type: `python main.py` to run the main script:
+   - ![image](https://user-images.githubusercontent.com/62312637/200746815-6b1f9b64-e4dd-47a1-add5-a765f7e15e09.png)
+6. You should now see a welcome message and a main menu like so:
+   - ![image](https://user-images.githubusercontent.com/62312637/200746939-c5040aec-b1e6-446f-88b6-7e8f9a48d6eb.png)
