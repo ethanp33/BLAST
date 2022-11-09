@@ -109,15 +109,17 @@ The get metadata function is used to download metadata for all sequences inside 
 ## 5. BLAST
 The BLAST function is used to run a BLAST on a single FASTA file or all FASTA files in a directory. As a warning, this function is extremely slow and I would reccommend running a single BLAST. The function places the results of the BLAST in CSV file format next to the inputted FASTA file. For example, if you input `blast\MN095883.1.fna`, it will place the CSV file in `blast`. For the BLAST functions, you can find the example files here: `examples\blast`.
 1. Select option 5 in the main menu by typing `5` and hitting enter:
-   - ![image](https://user-images.githubusercontent.com/62312637/200760687-1a3f5bb4-d431-47d6-bc12-195d5b6c0052.png)
+   - ![image](https://user-images.githubusercontent.com/62312637/200769568-d3b85f69-cd4b-456b-8d8f-a915d3bd052d.png)
 2. Type either S or M to run a Single or Multiple BLAST respectively. For example, type `S`:
-   - ![image](https://user-images.githubusercontent.com/62312637/200760879-d79e9e05-e438-45df-aa5f-3df7ada70cfd.png)
+   - ![image](https://user-images.githubusercontent.com/62312637/200769608-53c9df4c-e4a3-4b68-ad07-9edc421b753d.png)
 3. Type the location of the FASTA file you would like to BLAST. For example, type `examples\blast\MN095883.1.fna`:
-   - ![image](https://user-images.githubusercontent.com/62312637/200761565-23ad7c54-bda2-4f8d-8037-0f9aafcd2be0.png)
+   - ![image](https://user-images.githubusercontent.com/62312637/200769644-69b111fd-716d-45ed-ae86-98cfb9a6e9a3.png)
 4. Enter the blast type. For example, enter: `blastn`:
-   - ![image](https://user-images.githubusercontent.com/62312637/200761636-2f7956a7-94d1-4a77-a05b-c12e6f295efb.png)
+   - ![image](https://user-images.githubusercontent.com/62312637/200769675-19c23993-dda0-4d65-bc9c-ce87eaa5eecf.png)
 5. Enter Y or N for yes or no respectively to run a megablast. For example, enter: `N`
-   - ![image](https://user-images.githubusercontent.com/62312637/200763388-aebd0662-9ebf-49bb-80c3-17fc5e6980c1.png)
-6. Enter the maximum number of hits. For example, enter: `None`:
-   - ![image](https://user-images.githubusercontent.com/62312637/200763457-e128e7ca-5aeb-4b4d-b03f-e2d72d76cf43.png)
-7. The application will now create a CSV file containing the BLAST results in the `blast` folder.
+   - ![image](https://user-images.githubusercontent.com/62312637/200769693-a84df10a-cee5-44cf-83cd-626d2bc099bf.png)
+6. Enter the maximum number of hits. For example, enter: `5`:
+   - Warning: Typing None will cause this to run forever, I would avoid it if possible.
+   - ![image](https://user-images.githubusercontent.com/62312637/200769717-4d9eb7bb-de9b-4412-bc16-0e67d8cd6f93.png)
+7. The application will now create a CSV file containing the BLAST results in the `blast` folder:
+   - ![image](https://user-images.githubusercontent.com/62312637/200769795-6c533a21-e826-4bad-bcea-ff9c8766757d.png)
