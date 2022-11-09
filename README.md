@@ -59,7 +59,7 @@ Firstly, to run these scripts you must install Python. You can install standalon
    - ![image](https://user-images.githubusercontent.com/62312637/200746939-c5040aec-b1e6-446f-88b6-7e8f9a48d6eb.png)
 
 # Using Biopython-Scripts
-This section covers the useage and functionality of all the scripts accessible via the command line main menu by using the included example located in the `examples` folder.
+This section covers the useage and functionality of all the scripts accessible via the command line main menu by using the included example located in the `examples` folder and assumes you work your way through the below steps **in order**.
 
 ## 1. Downloading Sequences
 The download function is used to download FASTA files containing sequences from a text file contaning a line seperated text file containing a list of species names. This function downloads sequences and places them inside the `downloads\species_names\gene_name` folder. For the download function, you can find the example file here: `examples\nematode_names.txt`. As you can see, it contains line-seperated names of species we would like to download the sequences of:
@@ -72,12 +72,19 @@ The download function is used to download FASTA files containing sequences from 
    - ![image](https://user-images.githubusercontent.com/62312637/200755929-d2608155-e910-4302-8e3e-2b5b0fb81b00.png)
 4. Enter the name of the gene you would like to download sequences for. For example, use `COI`:
    - ![image](https://user-images.githubusercontent.com/62312637/200756072-3cc8a291-5178-4b15-a57a-d8d52392d494.png)
-5. The application will now download all sequences in FASTA file format, and store them in the `downloads\species_names\gene_name` folder:
+5. The application will now download all sequences in FASTA file format, and stores them in the `downloads\species_names\gene_name` folder:
    - ![image](https://user-images.githubusercontent.com/62312637/200756592-4ae0e40a-231d-4e72-9a26-30d82479be66.png)
 
 ## 2. Removing Duplicate Sequences
 The remove duplicate sequence function is used to remove FASTA files containing sequences in a directory given they have the same nucleotide sequence and country of origin.
 1. Select option 2 in the main menu by typing `2` and hitting enter:
+   - ![image](https://user-images.githubusercontent.com/62312637/200758009-f1de2108-726e-4f8d-a3e8-4982f5217063.png)
+2. Type the location of the folder containing FASTA files you would like to remove the duplicates of. For example, use `downloads\nematode_names\COI`:
+   - ![image](https://user-images.githubusercontent.com/62312637/200758425-7fff92c6-2d82-4c01-a694-ac75e6e83e1d.png)
+3. Enter your email address:
+   - ![image](https://user-images.githubusercontent.com/62312637/200758614-cbeabe41-1f11-4563-99e8-add0bfc2b23b.png)
+4. The application will now remove all sequences in the `downloads\nematode_names\COI` folder given they have the same nucleotide sequence and country of origin:
+   - ![image](https://user-images.githubusercontent.com/62312637/200758857-7029b0f6-134d-45c2-a774-0ad34e5aa4d0.png)
 
 ## 3. Combining Sequences
 The combine sequences function is used to combine FASTA files containing sequences in a directory into a single FASTA file. The function places the combined FASTA file inside of the `downloads\species_names\gene_name\combined` folder.
