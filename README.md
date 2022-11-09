@@ -35,5 +35,5 @@ Firstly, to run these scripts you must install Python. You can install standalon
 2. Extract the contents of the ZIP file to a location of your choice, make sure to remember where you extracted this!
 3. Open the `Biopython-Scripts-main` foldder in the location in which you extracted the ZIP file.
 4. Inside you will notice various files and folders:
-   - `__pychace__` - Ignore this folder! There is nothing of use here.
+   - `__pycache__` - Ignore this folder! There is nothing of use here.
    - `examples` - This folder containins multiple files that can be used as examples to test the operation of all scripts included in this package. As a majority of these scripts can take hours to run, I thought to include the results of using these examples for convenience.
