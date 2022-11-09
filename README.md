@@ -65,7 +65,15 @@ This section covers the useage and functionality of all the scripts accessible v
 The download function is used to download FASTA files containing sequences from a text file contaning a line seperated text file containing a list of species names. This function downloads sequences and places them inside the `downloads\species_names\gene_name` folder. For the download function, you can find the example file here: `examples\nematode_names.txt`. As you can see, it contains line-seperated names of species we would like to download the sequences of:
 - ![image](https://user-images.githubusercontent.com/62312637/200751704-a4629d0f-a566-4ba6-bcfa-39969e193079.png)
 1. Select option 1 in the main menu by typing `1` and hitting enter:
-
+   - ![image](https://user-images.githubusercontent.com/62312637/200755627-114b3815-330d-4464-b230-03bd59fcc166.png)
+2. Type the location of your text file containing line seperated species names. For example, use `examples\nematode_names.txt`:
+   - ![image](https://user-images.githubusercontent.com/62312637/200755872-e95b29ef-6640-499f-9b0a-28a013eb7470.png)
+3. Enter your email address:
+   - ![image](https://user-images.githubusercontent.com/62312637/200755929-d2608155-e910-4302-8e3e-2b5b0fb81b00.png)
+4. Enter the name of the gene you would like to download sequences for. For example, use `COI`:
+   - ![image](https://user-images.githubusercontent.com/62312637/200756072-3cc8a291-5178-4b15-a57a-d8d52392d494.png)
+5. The application will now download all sequences in FASTA file format, and store them in the `downloads\species_names\gene_name` folder:
+   - ![image](https://user-images.githubusercontent.com/62312637/200756424-6115afbc-8d7f-406f-9060-40ff72ab8074.png)
 
 ## 2. Removing Duplicate Sequences
 The remove duplicate sequence function is used to remove FASTA files containing sequences in a directory given they have the same nucleotide sequence and country of origin.
