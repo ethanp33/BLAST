@@ -109,3 +109,8 @@ The get metadata function is used to download metadata for all sequences inside 
 ## 5. BLAST
 The BLAST function is used to run a BLAST on a single FASTA file or all FASTA files in a directory. As a warning, this function is extremely slow and I would reccommend running a single BLAST. The function places the results of the BLAST in CSV file format next to the inputted FASTA file. For example, if you input `blast\MN095883.1.fna`, it will place the CSV file in `blast`. For the BLAST functions, you can find the example files here: `examples\blast`.
 1. Select option 5 in the main menu by typing `5` and hitting enter:
+   - ![image](https://user-images.githubusercontent.com/62312637/200760687-1a3f5bb4-d431-47d6-bc12-195d5b6c0052.png)
+2. Type either S or M to run a Single or Multiple BLAST respectively. For example, type `S`:
+   - ![image](https://user-images.githubusercontent.com/62312637/200760879-d79e9e05-e438-45df-aa5f-3df7ada70cfd.png)
+3. Type the location of the FASTA file you would like to BLAST. For example, type `blast\MN095883.1.fna`:
+   - 
