@@ -35,5 +35,25 @@ Firstly, to run these scripts you must install Python. You can install standalon
 2. Extract the contents of the ZIP file to a location of your choice, make sure to remember where you extracted this!
 3. Open the `Biopython-Scripts-main` foldder in the location in which you extracted the ZIP file.
 4. Inside you will notice various files and folders:
-   - `__pychace__` - Ignore this folder! There is nothing of use here :)
-   - `downloads` - 
+   - `__pycache__` - Ignore this folder! There is nothing of use here.
+   - `examples` - This folder containins multiple files that can be used as examples to test the operation of all scripts included in this package. As a majority of these scripts can take hours to run, I thought to include the results of using these examples for convenience.
+   - `blast_functions.py` - Module containing functions that run BLAST on FASTA files or FASTA files in a directory.
+   - `combine_sequence_function.py` - Module containing a function to combining FASTA files in a directory.
+   - `download_function.py` - Module containing a function that downloads FASTA files for species in a line seperated text file.
+   - `main.py` - The **main** Python script. Run this to access all modules/scripts in a command-line format.
+   - `metadata_functions.py` - Module containing functions that download metadata from the NCBI given a FASTA file containing multiple sequences.
+   - `notebook.ipynb` - Python Notebook that can be opened through GitHub to preview some of the applications of this script. Mostly used this when testing and creating my scripts.
+   - `README.MD` - Text file containing all of the documentation that you are reading now.
+   - `remove_duplicates_function.py` - Module containing a function that deletes duplicate FASTA files in a directory given they have the same sequence and country of origin.
+
+## 5. Running Biopython-Scripts
+1. If you installed Standalone Python, open Command Prompt on Windows or Terminal on Mac. If you installed Anaconda, open Anaconda Prompt.
+2. Get the directory of `Biopython-Scripts-main` In file explorer, click the box and copy the directory text like so: 
+   - ![image](https://user-images.githubusercontent.com/62312637/200745802-85d73f6d-bc8f-4dc2-b74c-6f8edff6bcca.png)
+3. As you can see, in this case my working directory is `D:\Biopython-Scripts-main`.
+4. Now in Command Prompt / Terminal / Anaconda Prompt, type: `cd "directory"` and hit enter. Where directory is your working  directory. In my case, I would type:
+   - `cd "D:\Biopython-Scripts-main"`
+5. Now type: `python main.py` to run the main script:
+   - ![image](https://user-images.githubusercontent.com/62312637/200746815-6b1f9b64-e4dd-47a1-add5-a765f7e15e09.png)
+6. You should now see a welcome message and a main menu like so:
+   - ![image](https://user-images.githubusercontent.com/62312637/200746939-c5040aec-b1e6-446f-88b6-7e8f9a48d6eb.png)
