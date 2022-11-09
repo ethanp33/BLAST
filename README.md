@@ -28,3 +28,7 @@ Firstly, to run these scripts you must install Python. You can install standalon
    - `pip install pandas`
    - `pip install lxml`
    - `pip install numpy`
+
+## 4. Downloading Biopython-Scripts
+
+1. 
