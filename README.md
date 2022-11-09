@@ -4,7 +4,7 @@ This section covers how to install Python, the necessary packages and how to ins
 
 ## 1. Installing Python
 
-Firstly, to run these scripts you must install Python. You can install standalone Python. Or, if you are planning on doing lots of data science in Python, you can install Anaconda which packages Python alongside libraries useful for data science.
+Firstly, to run these scripts you must install Python. You can install standalone Python. Or, if you are planning on doing lots of data science in Python, you can install Anaconda which packages Python alongside libraries useful for data science. For a majority of people, I would recommend installing standalone Python.
 - [Standalone Python](https://www.python.org/downloads/)
 - [Anaconda](https://www.anaconda.com/)
 
