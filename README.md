@@ -31,4 +31,5 @@ Firstly, to run these scripts you must install Python. You can install standalon
 
 ## 4. Downloading Biopython-Scripts
 
-1. 
+1. Click the green code button above, then select download ZIP. Or alternatively, click [this](https://github.com/ethanp33/Biopython-Scripts/archive/refs/heads/main.zip) to download the necessary files directly.
+2. 
