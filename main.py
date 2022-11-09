@@ -107,7 +107,7 @@ def remove_dupe_menu():
     print("You have selected option: 2 - Remove Duplicates: Removes duplicate FASTA sequences in a given directory given that the country of origin and sequence is the same. (Great to run after 1).")
 
     # Inputs
-    folder_dir = str(input("Please input the directory of the folder in which you would like duplicate FASTA sequences to be removed. \ni.e. examples\\downloads\\nematode_names\\COI\n"))
+    folder_dir = str(input("Please input the directory of the folder in which you would like duplicate FASTA sequences to be removed. \ni.e. downloads\\nematode_names\\COI\n"))
     if not os.path.exists(folder_dir):
         print("Folder doesn't exist or incorrect directory/location. Please try again.")
         remove_dupe_menu()
@@ -131,7 +131,7 @@ def combine_seq_menu():
     print("You have selected option: 3 - Combine Sequences: Combines all FASTA files in a given directory into a single FASTA file. (Great to run after 2).")
 
     # Inputs
-    folder_dir = str(input("Please input the directory of the folder in which you would like FASTA files to be combined. \ni.e. examples\\downloads\\nematode_names\\COI\n"))
+    folder_dir = str(input("Please input the directory of the folder in which you would like FASTA files to be combined. \ni.e. downloads\\nematode_names\\COI\n"))
     if not os.path.exists(folder_dir):
         print("Folder doesn't exist or incorrect directory/location. Please try again.")
         combine_seq_menu()
@@ -154,7 +154,7 @@ def get_metadata_menu():
     print("You have selected option: 4 - Get Metadata: Downloads metadata in a table format for every sequence in a given .FASTA file (Great to run after 3).")
 
     # Inputs
-    metadata_file_dir = str(input("Please input the location/directory of your .FASTA file containing multiple sequences. \ni.e. examples\downloads\\nematode_names\COI\combined\combined_sequences.fna\n"))
+    metadata_file_dir = str(input("Please input the location/directory of your .FASTA file containing multiple sequences. \ni.e. downloads\\nematode_names\COI\combined\combined_sequences.fna\n"))
     if not os.path.isfile(metadata_file_dir):
         print("File doesn't exist or incorrect directory/location. Please try again.")
         get_metadata_menu()
@@ -183,7 +183,7 @@ def blast_menu():
     if i.upper() == "S":
         
         # Inputs
-        blast_file_dir = str(input("Please input the location/directory of the .FASTA file you would like to BLAST. \ni.e. examples\\blast\\AB252222.1.fna\n"))
+        blast_file_dir = str(input("Please input the location/directory of the .FASTA file you would like to BLAST. \ni.e. examples\\blast\\MN095883.1.fna\n"))
         if not os.path.isfile(blast_file_dir):
             print("File doesn't exist or incorrect directory/location. Please try again.")
             blast_menu()
@@ -261,8 +261,6 @@ def main():
     print("This was created as part of my Bachelor of Applied Data Science degree (ADS3001) at Monash University during a remote internship for Manaakl Whenua Lancare Research New Zealand")
 
     main_menu()
-
-    pass
 
 # Startup
 if __name__ =="__main__":
