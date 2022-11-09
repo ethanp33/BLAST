@@ -89,6 +89,11 @@ The remove duplicate sequence function is used to remove FASTA files containing 
 ## 3. Combining Sequences
 The combine sequences function is used to combine FASTA files containing sequences in a directory into a single FASTA file. The function places the combined FASTA file inside of the `downloads\species_names\gene_name\combined` folder.
 1. Select option 3 in the main menu by typing `3` and hitting enter:
+   - ![image](https://user-images.githubusercontent.com/62312637/200759068-0936ce2e-9b7e-4761-b3bd-e903412c6e68.png)
+2. Type the location of the folder containing FASTA files you would like to combine into a single file. For example, use `downloads\nematode_names\COI`:
+   - ![image](https://user-images.githubusercontent.com/62312637/200759183-18de0f7c-f5fe-4302-94e4-bce83c0105a5.png)
+ 3. The application will now create a folder in `downloads\species_names\gene_name\` called `combined` which contains a FASTA file containing all the sequences:
+   - ![image](https://user-images.githubusercontent.com/62312637/200759373-bb7e6e22-0156-458a-b295-7b3fafac955b.png)
 
 ## 4. Retrieving Metadata
 The get metadata function is used to download metadata for all sequences inside of a FASTA file in the format of a CSV file. The function places the CSV file next to the inputted FASTA file. For example, if you input `downloads\species_names\gene_name\combined\combined_sequences.fna`, it will place the CSV file in `downloads\species_names\gene_name\combined`.
