@@ -253,8 +253,8 @@ def main():
     # Description
     print("\n")
     print("-----------------------------------------------------------------------------------------------------------------------")
-    print("Last updated: 19/10/2022")
-    print("Version: 1.0")
+    print("Last updated: 20/10/2022")
+    print("Version: 1.2")
     print("- By Ethan Payne | email: epay0001@student.monash.edu")
     print("-----------------------------------------------------------------------------------------------------------------------")
     print("Welcome to Ethan's collection of useful scripts!")
