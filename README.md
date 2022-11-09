@@ -1,3 +1,5 @@
+# Getting Started
+
 ## 1. Installing Python
 
 Firstly, to run these scripts you must install Python. You can install standalone Python. Or, if you are planning on doing lots of data science in Python, you can install Anaconda which packages Python alongside libraries useful for data science.
@@ -46,7 +48,7 @@ Firstly, to run these scripts you must install Python. You can install standalon
    - `README.MD` - Text file containing all of the documentation that you are reading now.
    - `remove_duplicates_function.py` - Module containing a function that deletes duplicate FASTA files in a directory given they have the same sequence and country of origin.
 
-## 5. Running Biopython-Scripts
+## 5. Running Main.py
 1. If you installed Standalone Python, open Command Prompt on Windows or Terminal on Mac. If you installed Anaconda, open Anaconda Prompt.
 2. Get the directory of `Biopython-Scripts-main` In file explorer, click the box and copy the directory text like so: 
    - ![image](https://user-images.githubusercontent.com/62312637/200745802-85d73f6d-bc8f-4dc2-b74c-6f8edff6bcca.png)
@@ -57,3 +59,8 @@ Firstly, to run these scripts you must install Python. You can install standalon
    - ![image](https://user-images.githubusercontent.com/62312637/200746815-6b1f9b64-e4dd-47a1-add5-a765f7e15e09.png)
 6. You should now see a welcome message and a main menu like so:
    - ![image](https://user-images.githubusercontent.com/62312637/200746939-c5040aec-b1e6-446f-88b6-7e8f9a48d6eb.png)
+
+# Using Biopython-Scripts
+
+## 1. Using the download function
+The download function is used to download FASTA files containing sequences from a text file contaning a line seperated text file containing a list of species names.
